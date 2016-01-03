@@ -410,9 +410,7 @@ class Item{
 	const CAKE = 354;
 	const BED = 355;
 
-
 	const COOKIE = 357;
-
 
 	const SHEARS = 359;
 	const MELON = 360;
@@ -566,6 +564,7 @@ class Item{
 			self::$list[self::COOKED_PORKCHOP] = CookedPorkchop::class;
 			self::$list[self::PAINTING] = Painting::class;
 			self::$list[self::GOLDEN_APPLE] = GoldenApple::class;
+			//self::$list[self::ENCHANTED_GOLDEN_APPLE] = EnchantedGoldenApple::class; FIXME
 			self::$list[self::SIGN] = Sign::class;
 			self::$list[self::WOODEN_DOOR] = WoodenDoor::class;
 			self::$list[self::BUCKET] = Bucket::class;
@@ -601,40 +600,38 @@ class Item{
 			self::$list[self::STEAK] = Steak::class;
 			self::$list[self::RAW_CHICKEN] = RawChicken::class;
 			self::$list[self::COOKED_CHICKEN] = CookedChicken::class;
+			self::$list[self::ROTTEN_FLESH] = RottenFlesh::class;
+			self::$list[self::BLAZE_ROD] = BlazeRod::class;
+			self::$list[self::GHAST_TEAR] = GhastTear::class;
 			self::$list[self::GOLD_NUGGET] = GoldNugget::class;
+			self::$list[self::WATER_BOTTLE] = WaterBottle::class;
+			self::$list[self::GLASS_BOTTLE] = GlassBottle::class;
+			self::$list[self::FERMENTED_SPIDER_EYE] = FermentedSpiderEye::class;
+			self::$list[self::BLAZE_POWDER] = BlazePowder::class;
+			self::$list[self::MAGMA_CREAM] = MagmaCream::class;
+			self::$list[self::GLISTERING_MELON] = GlisteringMelon::class;
 			self::$list[self::SPAWN_EGG] = SpawnEgg::class;
+			//self::$list[self::BOTTLE_OF_ENCHANTING] = BottleOfEnchanting::class; TODO: create class
 			self::$list[self::EMERALD] = Emerald::class;
 			self::$list[self::FLOWER_POT] = FlowerPot::class;
 			self::$list[self::CARROT] = Carrot::class;
 			self::$list[self::POTATO] = Potato::class;
 			self::$list[self::BAKED_POTATO] = BakedPotato::class;
+			self::$list[self::POISONOUS_POTATO] = PoisonousPotato::class;
+			self::$list[self::GOLDEN_CARROT] = GoldenCarrot::class;
 			self::$list[self::PUMPKIN_PIE] = PumpkinPie::class;
 			self::$list[self::NETHER_BRICK] = NetherBrick::class;
 			self::$list[self::QUARTZ] = Quartz::class;
 			self::$list[self::QUARTZ] = NetherQuartz::class;
 			// self::$list[self::CAMERA] = Camera::class;
+			self::$list[self::RAW_RABBIT] = RawRabbit::class;
+			self::$list[self::COOKED_RABBIT] = CookedRabbit::class;
+			//self::$list[self::RABBIT_STEW] = RabbitStew::class; TODO: create class
+			self::$list[self::RABBIT_FOOT] = RabbitFoot::class;
+			self::$list[self::RABBIT_HIDE] = RabbitHide::class;
 			self::$list[self::BEETROOT] = Beetroot::class;
 			self::$list[self::BEETROOT_SEEDS] = BeetrootSeeds::class;
 			self::$list[self::BEETROOT_SOUP] = BeetrootSoup::class;
-			self::$list[self::COOKED_RABBIT] = CookedRabbit::class;
-			self::$list[self::RAW_RABBIT] = RawRabbit::class;
-			self::$list[self::RABBIT_STEW] = RabbitStew::class;
-			self::$list[self::GLASS_BOTTLE] = GlassBottle::class;
-			self::$list[self::MAGMA_CREAM] = MagmaCream::class;
-			self::$list[self::GLISTERING_MELON] = GlisteringMelon::class;
-			self::$list[self::POISONOUS_POTATO] = PoisonousPotato::class;
-			self::$list[self::BOTTLE_OF_ENCHANTING] = BottleOfEnchanting::class;
-			self::$list[self::GOLDEN_CARROT] = GoldenCarrot::class;
-			self::$list[self::RABBIT_HIDE] = RabbitHide::class;
-			self::$list[self::RABBIT_FOOT] = RabbitFoot::class;
-			self::$list[self::GHAST_TEAR] = GhastTear::class;
-			self::$list[self::FERMENTED_SPIDER_EYE] = FermentedSpiderEye::class;
-			self::$list[self::BLAZE_POWDER] = BlazePowder::class;
-			self::$list[self::BLAZE_ROD] = BlazeRod::class;
-			self::$list[self::ROTTEN_FLESH] = RottenFlesh::class;
-			self::$list[self::GOLDEN_APPLE] = GoldenApple::class;
-			self::$list[self::ENCHANTED_GOLDEN_APPLE] = EnchantedGoldenApple::class;
-			self::$list[self::WATER_BOTTLE] = WaterBottle::class;
 
 			for($i = 0; $i < 256; ++$i){
 				if(Block::$list[$i] !== null){
