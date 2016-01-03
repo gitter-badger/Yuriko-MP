@@ -59,19 +59,7 @@ class LitRedstoneTorch extends Flowable{
 
                 return Level::BLOCK_UPDATE_NORMAL;
             }
-        }elseif($type === Level::BLOCK_UPDATE_REDSTONE){
-            if($this->getSide(0)->hasRedstoneOutput() and ($this->meta === 0 or $this->meta === 5 or $this->meta === 6)){
-                $this->level->setBlock($this, new UnlitRedstoneTorch(), true);
-                return Level::BLOCK_UPDATE_REDSTONE;
-            }
-            $sideUp = $this->getSide(1);
-            if($sideUp->isSolid()){
-                /** @var Solid $sideUp */
-                $sideUp->setRedstoneOutput(15);
-                return Level::BLOCK_UPDATE_REDSTONE;
-            }
         }
-
         return false;
     }
 

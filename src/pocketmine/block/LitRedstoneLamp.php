@@ -31,16 +31,6 @@ class LitRedstoneLamp extends Solid{
         $this->meta = $meta;
     }
 
-    public function onUpdate($type){
-        if($type === Level::BLOCK_UPDATE_REDSTONE){
-            if($this->getRedstoneInput() === 0){
-                $this->level->setBlock($this, new UnlitRedstoneLamp(), true);
-            }
-            return Level::BLOCK_UPDATE_REDSTONE;
-        }
-        return false;
-    }
-
     public function getName(){
         return "Redstone Lamp";
     }
