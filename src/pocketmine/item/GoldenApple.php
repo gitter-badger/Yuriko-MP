@@ -25,6 +25,9 @@ class GoldenApple extends Item{
 
 	public function __construct($meta = 0, $count = 1){
 		parent::__construct(self::GOLDEN_APPLE, $meta, $count, "Golden Apple");
+		if($this->meta === 1){
+			$this->name = "Enchanted Golden Apple";
+		}
 	}
 }
 
