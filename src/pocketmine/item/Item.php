@@ -532,10 +532,10 @@ class Item{
 			self::$list[self::GOLD_HOE] = GoldHoe::class;
 			self::$list[self::OAK_DOOR] = OakDoor::class;
 			self::$list[self::SPRUCE_DOOR] = SpruceDoor::class;
-			self::$list[self::ACACIA_DOOR] = AcaciaDoor::class;
-			self::$list[self::BIRCH_DOOR] = BirchDoor::class;
-			self::$list[self::DARK_OAK_DOOR] = DarkOakDoor::class;
-			self::$list[self::JUNGLE_DOOR] = JungleDoor::class;
+			//self::$list[self::ACACIA_DOOR] = AcaciaDoor::class;
+			//self::$list[self::BIRCH_DOOR] = BirchDoor::class;
+			//self::$list[self::DARK_OAK_DOOR] = DarkOakDoor::class;
+			//self::$list[self::JUNGLE_DOOR] = JungleDoor::class;
 			self::$list[self::WHEAT_SEEDS] = WheatSeeds::class;
 			self::$list[self::WHEAT] = Wheat::class;
 			self::$list[self::BREAD] = Bread::class;

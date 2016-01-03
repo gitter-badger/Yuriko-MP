@@ -19,7 +19,6 @@
 
 * Flower Pot
 * TNT's lateral textures are rotated weirdly (when dropped)
-* Doors drop tile.OakDoor.name when breaked (I tried with explosion)
 * Redstone lamps
 * There are two blank boxes at the bottom of the creative inventory (building blocks)
 * Other fixes
