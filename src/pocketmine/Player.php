@@ -2228,6 +2228,41 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 						}else{
 							$snowball->spawnToAll();
 						}
+					}elseif($item->getId() === Item::EGG){
+						$nbt = new Compound("", [
+							"Pos" => new Enum("Pos", [
+								new Double("", $this->x),
+								new Double("", $this->y + $this->getEyeHeight()),
+								new Double("", $this->z)
+							]),
+							"Motion" => new Enum("Motion", [
+								new Double("", $aimPos->x),
+								new Double("", $aimPos->y),
+								new Double("", $aimPos->z)
+							]),
+							"Rotation" => new Enum("Rotation", [
+								new Float("", $this->yaw),
+								new Float("", $this->pitch)
+							]),
+						]);
+
+						$egg = Entity::createEntity("Egg", $this->chunk, $nbt, $this);
+						$egg->setMotion($this->getDirectionVector()->multiply(1.5));
+						if($this->isSurvival()){
+							$item->setCount($item->getCount() - 1);
+							$this->inventory->setItemInHand($item->getCount() > 0 ? $item : Item::get(Item::AIR));
+						}
+						if($egg instanceof Projectile){
+							$this->server->getPluginManager()->callEvent($projectileEv = new ProjectileLaunchEvent($egg));
+							if($projectileEv->isCancelled()){
+								$egg->kill();
+							}else{
+								$egg->spawnToAll();
+								$this->level->addSound(new LaunchSound($this), $this->getViewers());
+							}
+						}else{
+							$egg->spawnToAll();
+						}
 					}elseif($item->getId() === Item::BOW){
 						$this->server->getPluginManager()->callEvent(new PlayerBowAimEvent($this));
 					}
