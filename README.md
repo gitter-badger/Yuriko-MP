@@ -2,6 +2,7 @@
 ## Formerly known as PMTF Project
 
 Yuriko-MP, a kawaii-powered PocketMine-based software for Minecraft: Pocket Edition
+
 Copyright 2016 ItalianDevs4PM.
 
 This work is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
