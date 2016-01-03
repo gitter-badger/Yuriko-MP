@@ -460,7 +460,7 @@ class Item{
 	const QUARTZ = 406;
 	const NETHER_QUARTZ = 406;
 
-	// const RABBIT_STEW = 413; It already exists on line 297
+	const RABBIT_STEW = 413;
 
 	const SPRUCE_DOOR = 427;
 	const BIRCH_DOOR = 428;
