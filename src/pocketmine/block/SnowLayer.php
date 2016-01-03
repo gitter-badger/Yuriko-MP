@@ -53,21 +53,12 @@ class SnowLayer extends Flowable{
 	public function place(Item $item, Block $block, Block $target, $face, $fx, $fy, $fz, Player $player = null){
 		$down = $this->getSide(0);
 		if($down->isSolid()){
-				if($down->getId() === $this->getId() && $down->getDamage() <= 7) {
-					if ($down->getDamage() === 7) {
-						$this->getLevel()->setBlock($down, $this, true);
-					} else{
-						$down->setDamage($down->getDamage() + 1);
-					$this->getLevel()->setBlock($down, $down, true);
-				}
-
-				return true;
-
-			}else {
-					$this->getLevel()->setBlock($block, $this, true);
-
-					return true;
-			}
+			$this->getLevel()->setBlock($block, $this, true);
+			return true;
+		}elseif($down->getId() === $this->getId() and $down->getDamage() < 7){
+			$down->setDamage($down->getDamage() + 1);
+			$this->getLevel()->setBlock($down, $down, true);
+			return true;
 		}
 		return false;
 	}
@@ -79,11 +70,10 @@ class SnowLayer extends Flowable{
 
 				return Level::BLOCK_UPDATE_NORMAL;
 			}
-		}
-		elseif($type === Level::BLOCK_UPDATE_RANDOM){ // added melting
+		}elseif($type === Level::BLOCK_UPDATE_RANDOM){ // added melting
 			if($this->getLevel()->getBlockLightAt($this->x, $this->y, $this->z) >= 10){
 				$this->getLevel()->setBlock($this, new Air(), true);
-				return Level::BLOCK_UPDATE_NORMAL;
+				return Level::BLOCK_UPDATE_RANDOM;
 			}
 		}
 		

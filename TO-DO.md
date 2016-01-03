@@ -44,7 +44,6 @@
 * Redstone torches can't turn off by a redstone impulse
 * Redstone torches can't turn on redstone wire while them are placed under or in side of the block in the bottom of redstone wire
 * Iron doors can be opened like normal doors
-* Cannot place more than 2 snow layers in top to a snow block
 * Sometimes player gets stuck when moving on slabs or other "half blocks"
 * Experience and hunger don't get saved
 * When a player deaths he cannot respawn and there is a critical error in the console
