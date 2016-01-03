@@ -50,7 +50,7 @@ class CoalOre extends Solid{
 
 	public function onBreak(Item $item){
 		if($this->getRandomExperience($item) > 0){
-			Entity::createEntity("ExperienceOrb", $this->level->getChunk($this->x >> 4, $this->z >> 4), new Compound("", [
+			$exp = Entity::createEntity("ExperienceOrb", $this->level->getChunk($this->x >> 4, $this->z >> 4), new Compound("", [
 				"Pos" => new Enum("Pos", [
 					new Double("", $this->x),
 					new Double("", $this->y),
@@ -66,6 +66,7 @@ class CoalOre extends Solid{
 					new Float("", 0)
 				]),
 			]));
+			$exp->spawnToAll();
 		}
 		return parent::onBreak($item);
 	}
