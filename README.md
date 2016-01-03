@@ -36,7 +36,7 @@ Just to be clear, we want to develop a free software but LGPL allows to redistri
 
 ### NoDerivatives
 
-We don't want forks of the fork, so if you have a fix or a implementation you can fork it and submit a pull request; in this mode we can keep only one fork with all implementations/fixes. One fork, better programming.
+We don't want forks of the fork, so if you have a fix or an implementation you can fork it and submit a pull request; this way we can keep only one fork with all implementations/fixes. One fork, better programming.
 Anyway, some servers can have different necessities than others, so you can modify Yuriko-MP but only for personal use.
 
 If you want to modify Yuriko-MP for personal use:
