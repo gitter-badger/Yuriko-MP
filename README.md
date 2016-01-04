@@ -1,6 +1,8 @@
 # Yuriko-MP
 ## Formerly known as PMTF Project
 
+[![Join the chat at https://gitter.im/ItalianDevs4PM/Yuriko-MP](https://badges.gitter.im/ItalianDevs4PM/Yuriko-MP.svg)](https://gitter.im/ItalianDevs4PM/Yuriko-MP?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Yuriko-MP, a kawaii-powered PocketMine-based software for Minecraft: Pocket Edition
 
 Copyright 2016 ItalianDevs4PM.
